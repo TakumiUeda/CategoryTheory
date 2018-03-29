@@ -1,0 +1,97 @@
+% !TEX root =../main.tex
+\chapter{圏，函手，自然変換}
+\section{圏に関する公理}
+\begin{Definition}[メタグラフ]
+\ \\
+　メタグラフは対象$A,B,C,\dots$，射$f,g,h,\dots$，および次の2つの演算からなる．\\
+射$f$が対象$A$から対象$B$への関係を示すものであるとき，
+\begin{align}
+\begin{split}
+f:
+\xymatrix{
+    A \ar[r] & B
+    }
+\end{split}
+\end{align}
+または
+\begin{align}
+\begin{split}
+  \xymatrix{
+    A \ar[r]^{f} & B
+    } 
+\end{split}
+\end{align}
+で表す．このとき，$A$をドメイン，$B$をコドメインという．これらはdom，codを用いてそれぞれ
+\begin{align}
+\begin{split}
+A &= dom\ f\\
+B &= cod\ f
+\end{split}
+\end{align}
+で表す．
+\end{Definition}
+ある射$f$および$g$による合成演算$\circ$は\\
+\begin{align}
+\begin{split}
+\xymatrix{
+    A \ar[r]^{f} & B  \ar[r]^{g} & C
+    }
+\end{split}
+\end{align}
+に関して
+\begin{align}
+\begin{split}
+\xymatrix{
+    A  \ar[r]^{g \circ f} & C
+    }
+\end{split}
+\end{align}
+で定義する．メタ圏における演算則は次の公理に従う．
+\begin{Axion}
+\ \\
+　１．結合則
+\begin{align}
+\begin{split}
+\xymatrix{
+    A \ar[r]^{f} & B  \ar[r]^{g} & C \ar[r]^{h} & D
+    }
+\end{split}
+\end{align}
+が与えられた時，次の等式が常に成り立つ．
+\begin{align}
+\begin{split}
+h \circ (g \circ f)=(k \circ g) \circ f
+\end{split}
+\end{align}
+これは図を用いて次のように表現できる．
+\begin{align}
+\begin{split}
+\xymatrix{
+    A  \ar[rrrrd]|{\hole} \ar[rrrr]^-{h \circ (g \circ f)=(k \circ g) \circ f} \ar[d]^-{f} & \ar@{}[r]_-{g \circ f}& & \ar@{}[l]^-{k \circ g} & D  \\
+    B \ar[rrrr]_-{g} \ar[rrrru]  & & & & C\ar[u]^-{k} 
+    }
+\end{split}
+\end{align}
+　２．単位元律
+\begin{align}
+\begin{split}
+1_{b} \circ f = f \hspace{10mm}
+g \circ 1_{b} = g 
+\end{split}
+\end{align}
+\begin{align}
+\begin{split}
+\xymatrix{
+    A  \ar[r]^{f} \ar[rd]_{f} & B \ar[d]^{I_{b}} \ar[rd]^{g} \\
+    & B \ar[r]_{g} & C 
+    }
+\end{split}
+\end{align}
+\end{Axion}
+\section{圏}
+\section{函手}
+\section{自然変換}
+\section{モニック射，エピ射，ゼロ射}
+\section{基礎論}
+\section{大きな圏}
+\section{Hom集合}
